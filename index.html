@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>MG - Memory Game</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <script src="./app/index.js"></script>
+        <style>
+            /* Sticky footer styles
+            -------------------------------------------------- */
+            html {
+              position: relative;
+              min-height: 100%;
+            }
+            body {
+              /* Margin bottom by footer height */
+              margin-bottom: 60px;
+            }
+            .footer {
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              /* Set the fixed height of the footer here */
+              height: 60px;
+              line-height: 60px; /* Vertically center the text there */
+              background-color: #f5f5f5;
+            }
+
+            /* Custom page CSS
+            -------------------------------------------------- */
+            /* Not required for template or sticky footer method. */
+
+            body > .container {
+              padding: 60px 15px 0;
+            }
+
+            .footer > .container {
+              padding-right: 15px;
+              padding-left: 15px;
+            }
+
+            code {
+              font-size: 80%;
+            }
+
+            .row {
+                padding-top: 25px;
+            }
+
+            nav > a {
+                padding-left: 15px;
+            }
+
+            /* CSS GAME
+            -------------------------------------------------- */
+            .game {
+                display: block;
+                text-align: center;
+            }
+
+            .material-icons.md-48 { font-size: 48px; }
+            .material-icons.md-62 { font-size: 62px; }
+            .material-icons.md-74 { font-size: 74px; }
+            .material-icons { border: 1px solid #000000 }
+
+            .material-icons[value*="favorite"] {color: #CC0000;}
+            .material-icons[value*="delete"] {color: #CCCCCC;}
+            .material-icons[value*="face"] {color: #FDB750;}
+            .material-icons[value*="bug_report"] {color: #000000;}
+            .material-icons[value*="stars"] {color: #FF8C00;}
+            .material-icons[value*="pets"] {color: #83746E;}
+            .material-icons[value*="perm_device_information"] {color: #0000CC;}
+            .material-icons[value*="hourglass_empty"] {color: #007700;}
+            .material-icons[value*="android"] {color: #116530}
+            .material-icons[value*="alarm"] {color: #0C2D48}
+            .material-icons[value*="pan_tool"] {color: #AA1945}
+            .material-icons[value*="extension"] {color: #FC2E20}
+            .material-icons[value*="flight_takeoff"] {color: #7DA1BF}
+            .material-icons[value*="flight_land"] {color: #7DA1BF}
+            .material-icons[value*="build"] {color: #CAB29F}
+            .material-icons[value*="star"] {color: #B68D40}
+            .material-icons[value*="store"] {color: #333652}
+            .material-icons[value*="rowing"] {color: #E8B4B8}
+            .point { font-size: 30px; }
+            .par { font-size: 30px; }
+            .footer { text-align: center; }
+        </style>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="#">MG - Memory Game</a>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+            </div>
+            </nav>
+        </header>
+
+        <main id="grid" role="main" class="container">
+            <div id="memory-game" class="game" ></div>
+        </main>
+
+        <footer class="footer">
+          <div class="container">
+            <span class="text-muted">/ᐠ𝅒_𝅒ᐟ\ﾉ Please enjoy - 2022 - [^._.^]ﾉ彡</span>
+          </div>
+        </footer>
+    </body>
+</html>
