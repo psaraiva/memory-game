@@ -1,12 +1,6 @@
 import $ from 'jquery';
 
 class Game {
-  constructor() {
-    this.quantity = 36;
-    this.size = "md-74";
-    this.icons = this.icons.concat(this.icons);
-  }
-
   icons = [
     'favorite',
     'delete',
@@ -37,17 +31,24 @@ class Game {
   par = 0;
 
   start() {
+    this.quantity = 36;
+    this.size = "md-74";
+    this.icons = this.icons.concat(this.icons);
+
     this.init();
     this.makeBoard();
     this.makeScore();
+    this.makeControl();
   }
 
   init(){
     this.main_element = $('#memory-game');
     this.main_element.append("<div id=\"board\"></div>");
     this.main_element.append("<div id=\"score\"></div>");
+    this.main_element.append("<div id=\"control\"></div>");
     this.board_element = $("#memory-game > #board");
     this.score_element = $("#memory-game > #score");
+    this.control_element = $("#memory-game > #control");
     this.sort();
   }
 
@@ -87,6 +88,20 @@ class Game {
     this.score_element.append(cell);
   }
 
+  makeControl() {
+    let cell = $("<span>")
+      .addClass("reset")
+      .text("Reset")
+      .attr("id", "reset");
+    this.control_element.append(cell);
+
+    let obj = this;
+    $("#memory-game > #control > .reset").on('click', function() {
+      obj.reset();
+      obj.start();
+    });
+  }
+
   generateRow() {
     this.board_element.append("<br>");
   }
@@ -107,8 +122,8 @@ class Game {
   }
 
   applyListernes() {
-    var obj = this;
-    $( "#memory-game > #board > .material-icons" ).on('click', function(el) {
+    let obj = this;
+    $("#memory-game > #board > .material-icons").on('click', function(el) {
       obj.turnCard($(el.target));
     });
   }
@@ -137,7 +152,7 @@ class Game {
       return;
     }
 
-    var obj = this;
+    let obj = this;
     setTimeout(function() {
       $(cells[0]).text('image').attr('turn', 'false').attr("value", "image");
       $(cells[1]).text('image').attr('turn', 'false').attr("value", "image");
@@ -148,6 +163,15 @@ class Game {
   updateDisplayScore() {
     this.score_element.children("#points").text(`Points: ${this.score}`);
     this.score_element.children("#par").text(`Par: ${this.par}`);
+  }
+
+  reset() {
+    $("#memory-game > #board > .material-icons").off('click')
+    $("#memory-game > #control > .reset").off("click");
+
+    this.board_element.remove();
+    this.score_element.remove();
+    this.control_element.remove();
   }
 }
 

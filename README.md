@@ -29,4 +29,4 @@ Execute: `parcel index.html`
 ![Example Screen](./doc/mg-memory-game.png "Example Screen")
 
 ## Obs: Dev
-The intent of this game is unprofessional so some bugs were tolerated, however please enjoy. `[^._.^]ﾉ彡`
+`/ᐠ𝅒_𝅒ᐟ\ﾉ` The intent of this game is unprofessional so some bugs were tolerated, however please enjoy. `[^._.^]ﾉ彡`
